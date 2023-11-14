@@ -1,0 +1,45 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.nodes-container {
+  margin: 5px 0;
+}
+
+.node {
+  cursor: pointer;
+  background: skyblue;
+  padding: 5px 10px;
+  display: flex;
+}
+
+.node-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.child-nodes {
+  border: 1px solid lightgray;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 300ms;
+}
+
+.child-nodes.active-panel {
+  height: fit-content;
+  visibility: unset;
+  padding: 10px 0 10px 10px;
+  transition: 300ms;
+}
+
+.arrow-icon {
+  transition: 300ms;
+}
+
+.active-panel > .arrow-icon {
+  transform: rotate(90deg);
+}
